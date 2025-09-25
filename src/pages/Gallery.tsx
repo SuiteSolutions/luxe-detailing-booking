@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BeforeAfterSlider } from '@/components/ui/before-after-slider';
-import bmwBeforeImage from '@/assets/bmw-m4-before.jpg';
-import bmwAfterImage from '@/assets/bmw-m4-after.jpg';
+import bmwBeforeImage from '@/assets/bmw-m4-before-new.png';
+import bmwAfterImage from '@/assets/bmw-m4-after-new.png';
 
 const Gallery = () => {
   const featuredProject = {
