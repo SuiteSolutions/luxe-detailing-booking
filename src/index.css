@@ -2,95 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Big Coches Design System - Premium Luxury Car Detailing
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
+    /* Core Background System */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background-dark: 220 13% 4%;
+    --background-darker: 220 15% 2.5%;
+    --foreground: 220 13% 4%;
 
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-dark: 220 13% 6%;
+    --card-foreground: 220 13% 4%;
+    --card-foreground-dark: 210 40% 98%;
 
+    /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-dark: 220 13% 6%;
+    --popover-foreground: 220 13% 4%;
+    --popover-foreground-dark: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Big Coches Brand Colors */
+    --primary: 214 100% 60%;
+    --primary-dark: 214 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Luxury Accent System */
+    --luxury-blue: 214 100% 60%;
+    --luxury-blue-light: 214 100% 70%;
+    --luxury-silver: 210 20% 80%;
+    --luxury-platinum: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Secondary Palette */
+    --secondary: 210 40% 96%;
+    --secondary-dark: 220 13% 10%;
+    --secondary-foreground: 220 13% 4%;
+    --secondary-foreground-dark: 210 40% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Text Hierarchy */
+    --text-primary: 220 13% 4%;
+    --text-primary-dark: 210 40% 98%;
+    --text-secondary: 220 9% 46%;
+    --text-secondary-dark: 210 20% 80%;
+    --text-muted: 220 9% 46%;
+    --text-muted-dark: 210 16% 70%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Interactive Elements */
+    --accent: 214 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --hover: 214 100% 65%;
+    --hover-dark: 214 100% 50%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 13% 4%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border System */
+    --border: 220 13% 91%;
+    --border-dark: 220 13% 15%;
+    --input: 220 13% 91%;
+    --input-dark: 220 13% 15%;
+    --ring: 214 100% 60%;
 
-    --radius: 0.5rem;
+    /* Design System Variables */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 60%), hsl(214 100% 70%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 13% 4%), hsl(220 13% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-midnight: linear-gradient(180deg, hsl(220 13% 4%), hsl(220 15% 2.5%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Luxury Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(214 100% 60% / 0.25);
+    --shadow-premium: 0 20px 25px -5px hsl(220 13% 4% / 0.1), 
+                      0 10px 10px -5px hsl(220 13% 4% / 0.04);
+    --shadow-card: 0 10px 15px -3px hsl(220 13% 4% / 0.1),
+                   0 4px 6px -2px hsl(220 13% 4% / 0.05);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animation & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
+  /* Dark Theme for Premium Sections */
+  .theme-dark {
+    --background: 220 13% 4%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    --card: 220 13% 6%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    --popover: 220 13% 6%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
+    --primary: 214 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 10%;
     --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --muted: 220 13% 10%;
+    --muted-foreground: 210 20% 80%;
+    --accent: 214 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 214 100% 60%;
   }
 }
 
@@ -100,6 +123,102 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Big Coches Premium Components */
+@layer components {
+  /* Hero Section Styles */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center;
+    background: var(--gradient-hero);
+  }
+
+  .hero-title {
+    @apply text-5xl md:text-7xl font-black leading-tight tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-xl md:text-2xl font-medium text-text-secondary;
+  }
+
+  /* Dark Section Styles */
+  .section-dark {
+    @apply bg-background-dark text-text-primary-dark;
+    background: var(--gradient-dark);
+  }
+
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply inline-flex items-center justify-center rounded-lg px-8 py-4 text-base font-semibold;
+    @apply bg-primary text-primary-foreground hover:bg-hover;
+    @apply shadow-luxury transition-all duration-300;
+    @apply hover:scale-105 hover:shadow-premium;
+  }
+
+  .btn-outline-luxury {
+    @apply inline-flex items-center justify-center rounded-lg px-8 py-4 text-base font-semibold;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  /* Premium Card Styles */
+  .card-luxury {
+    @apply bg-card border border-border rounded-xl p-6;
+    @apply shadow-card hover:shadow-premium transition-all duration-300;
+    @apply hover:-translate-y-1;
+  }
+
+  .card-dark {
+    @apply bg-card-dark border border-border-dark text-card-foreground-dark;
+    @apply shadow-premium hover:shadow-luxury;
+  }
+
+  /* Before/After Component */
+  .before-after-container {
+    @apply relative overflow-hidden rounded-xl;
+    @apply shadow-premium hover:shadow-luxury transition-all duration-500;
+  }
+
+  /* Testimonial Styles */
+  .testimonial-card {
+    @apply bg-card-dark border border-border-dark rounded-xl p-8;
+    @apply text-card-foreground-dark shadow-premium;
+  }
+
+  /* Luxury Typography */
+  .text-luxury-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in-up {
+    @apply opacity-0 translate-y-8;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    @apply scale-95 opacity-0;
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    @apply scale-100 opacity-100;
   }
 }
