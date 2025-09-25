@@ -21,7 +21,22 @@ export const Chatbot: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const WEBHOOK_URL = 'https://octaviansuite.app.n8n.cloud/webhook/504b50a1-2769-4908-8630-e93053bd140c';
+const WEBHOOK_URL = 'https://octaviansuite.app.n8n.cloud/webhook/504b50a1-2769-4908-8630-e93053bd140c';
+
+  const loadingMessages = [
+    "🏎️ Acelerando la respuesta...",
+    "⚡ Pisando el acelerador para responder...",
+    "🔧 Ajustando la respuesta perfecta...",
+    "🏁 La respuesta está llegando a toda velocidad...",
+    "🚗 Arrancando motores para ayudarte...",
+    "⚙️ Cambiando de marcha para responderte...",
+    "🛞 Rodando hacia la mejor respuesta...",
+    "🏆 Preparando una respuesta de lujo..."
+  ];
+
+  const getRandomLoadingMessage = () => {
+    return loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -124,7 +139,7 @@ export const Chatbot: React.FC = () => {
             <div className="flex items-center gap-2">
               <LottieAnimation
                 animationPath="/animations/car.json"
-                className="h-5 w-5"
+                className="h-8 w-8"
               />
               <h3 className="font-semibold">Asistente BigCoches</h3>
             </div>
@@ -180,9 +195,9 @@ export const Chatbot: React.FC = () => {
                 <div className="bg-card border border-border rounded-lg px-3 py-2 text-sm flex items-center gap-2">
                   <LottieAnimation
                     animationPath="/animations/car.json"
-                    className="h-4 w-4"
+                    className="h-7 w-7"
                   />
-                  <span>BigCoches está escribiendo...</span>
+                  <span>{getRandomLoadingMessage()}</span>
                 </div>
               </div>
             )}
