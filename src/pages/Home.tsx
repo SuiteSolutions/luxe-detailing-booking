@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Shield, Clock, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BeforeAfterSlider } from '@/components/ui/before-after-slider';
 import heroImage from '@/assets/hero-porsche.jpg';
-import bmwBeforeImage from '@/assets/bmw-m4-before-new.png';
-import bmwAfterImage from '@/assets/bmw-m4-after-new.png';
 
 const Home = () => {
   const features = [
@@ -145,53 +142,6 @@ const Home = () => {
                 Conoce Nuestra Historia
               </Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Before/After Transformation Section */}
-      <section className="relative py-24 bg-gradient-to-b from-background to-secondary/30 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-12">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-black text-foreground">
-                Transformación{' '}
-                <span className="text-luxury-gradient">Interactiva</span>
-              </h2>
-              <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-                Descubre la diferencia de nuestro coating cerámico premium. Desliza para ver el antes y después de este BMW M4 Competition.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <BeforeAfterSlider
-                  beforeImage={bmwBeforeImage}
-                  afterImage={bmwAfterImage}
-                  beforeAlt="BMW M4 antes del detailing"
-                  afterAlt="BMW M4 después del coating cerámico"
-                  className="w-full aspect-video"
-                />
-              </div>
-              
-              <div className="mt-8 space-y-4">
-                <div className="flex flex-wrap justify-center gap-4">
-                  <div className="px-4 py-2 bg-primary/10 rounded-full text-primary font-medium">
-                    ⏱️ 8 horas de trabajo
-                  </div>
-                  <div className="px-4 py-2 bg-primary/10 rounded-full text-primary font-medium">
-                    🏆 Coating Cerámico Premium
-                  </div>
-                </div>
-                
-                <Button asChild className="btn-luxury">
-                  <Link to="/galeria">
-                    Ver Más Transformaciones
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
