@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 import { Button } from './button';
 import { Input } from './input';
 import { Card } from './card';
 import { toast } from '@/hooks/use-toast';
+import { LottieAnimation } from './lottie-animation';
 
 interface Message {
   id: string;
@@ -108,7 +109,10 @@ export const Chatbot: React.FC = () => {
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-luxury hover:shadow-premium transition-all duration-300 hover:scale-110 z-50"
           size="lg"
         >
-          <MessageCircle className="h-6 w-6" />
+          <LottieAnimation
+            animationPath="/animations/car.json"
+            className="h-8 w-8"
+          />
         </Button>
       )}
 
@@ -118,7 +122,10 @@ export const Chatbot: React.FC = () => {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-primary text-primary-foreground rounded-t-xl">
             <div className="flex items-center gap-2">
-              <MessageCircle className="h-5 w-5" />
+              <LottieAnimation
+                animationPath="/animations/car.json"
+                className="h-5 w-5"
+              />
               <h3 className="font-semibold">Asistente BigCoches</h3>
             </div>
             <Button
@@ -135,7 +142,10 @@ export const Chatbot: React.FC = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background">
             {messages.length === 0 && (
               <div className="text-center text-text-secondary py-8">
-                <MessageCircle className="h-12 w-12 mx-auto mb-3 text-primary" />
+                <LottieAnimation
+                  animationPath="/animations/car.json"
+                  className="h-12 w-12 mx-auto mb-3"
+                />
                 <p>¡Hola! Soy tu asistente de BigCoches.</p>
                 <p className="text-sm">¿En qué puedo ayudarte hoy?</p>
               </div>
@@ -168,8 +178,11 @@ export const Chatbot: React.FC = () => {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-card border border-border rounded-lg px-3 py-2 text-sm flex items-center gap-2">
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Escribiendo...</span>
+                  <LottieAnimation
+                    animationPath="/animations/car.json"
+                    className="h-4 w-4"
+                  />
+                  <span>BigCoches está escribiendo...</span>
                 </div>
               </div>
             )}
